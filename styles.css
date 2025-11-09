@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --font-display: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-size: 16px;
+    --background: #030711;
+    --foreground: #f9fafb;
+    --card: #111827;
+    --card-foreground: #f9fafb;
+    --border: #1f2937;
+    --radius: 0.625rem;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.5;
+}
+
+.song-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.song-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Add more styles as needed */
