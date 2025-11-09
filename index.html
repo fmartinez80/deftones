@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="bg-gray-900 pt-8 pb-12 px-4">
+            <div class="max-w-4xl mx-auto">
+                <img src="/images/deftones-logo.png" alt="DEFTONES" class="h-24 mx-auto filter brightness-0 invert">
+            </div>
+        </header>
+
+        <div id="voting-container" class="max-w-2xl mx-auto">
+            <div id="songs-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Song cards will be inserted here by JavaScript -->
+                <div class="text-center py-12">
+                    <div class="animate-pulse">
+                        <div class="h-8 bg-gray-800 rounded w-3/4 mx-auto mb-4"></div>
+                        <div class="h-4 bg-gray-800 rounded w-1/2 mx-auto mb-6"></div>
+                        <div class="h-32 bg-gray-800 rounded-lg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="results" class="mt-12 hidden">
+                <h2 class="text-2xl font-bold mb-6 text-center">Current Rankings</h2>
+                <div id="rankings-list" class="space-y-4">
+                    <!-- Rankings will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Supabase client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.21.0/dist/umd/supabase.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
